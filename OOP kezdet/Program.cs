@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace OOP_kezdet
 {
-    class teglalap
+    class kor
     {
-        public int a;
-        public int b;
-        public int keruletmetodus()
+        public double r;
+      
+        public double keruletmetodus()
         {
             //Console.WriteLine("{0} vagyok és {1}éves",nev, eletkor);
             //lehetseges megoldas/rovidites return $"{nev} vagyok {eletkor} éves";
             //string valasz = $"{nev} vagyok {eletkor} éves";
             // return valasz;
-           
-            return 2*a+2*b;
+
+            return 2 * r * Math.PI; 
 
         }
-        public int teruletmetodus()
+        public double teruletmetodus()
         {
-            
-            return a*b;
+
+            return r*r*Math.PI;
 
         }
 
@@ -45,10 +45,10 @@ namespace OOP_kezdet
             //  Console.WriteLine(Pisti.bemutatkozas());
             // Console.WriteLine(eva.bemutatkozas()); 
 
-            teglalap t = new teglalap();
-            t.a = int.Parse(Console.ReadLine());
+            kor t = new kor();
+            t.r = int.Parse(Console.ReadLine());
             
-            t.b = int.Parse(Console.ReadLine());
+            
 
             Console.WriteLine(t.keruletmetodus());
             Console.WriteLine(t.teruletmetodus());
