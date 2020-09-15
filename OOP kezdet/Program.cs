@@ -6,18 +6,24 @@ using System.Threading.Tasks;
 
 namespace OOP_kezdet
 {
-    class Ember
+    class teglalap
     {
-        public string nev;
-        public int eletkor;
-        public string bemutatkozas()
+        public int a;
+        public int b;
+        public int keruletmetodus()
         {
             //Console.WriteLine("{0} vagyok és {1}éves",nev, eletkor);
             //lehetseges megoldas/rovidites return $"{nev} vagyok {eletkor} éves";
-            string valasz = $"{nev} vagyok {eletkor} éves";
-            return valasz;
+            //string valasz = $"{nev} vagyok {eletkor} éves";
+            // return valasz;
+           
+            return 2*a+2*b;
+
+        }
+        public int teruletmetodus()
+        {
             
-            
+            return a*b;
 
         }
 
@@ -27,17 +33,25 @@ namespace OOP_kezdet
     {
         static void Main(string[] args)
         {
-            Ember Pisti = new Ember();
-            Pisti.nev = "Nagy Pisti";
-            Pisti.eletkor = 20;
-            Pisti.eletkor++;
-            Ember eva = new Ember();
-            eva.nev = "Nagy Éva";
-            eva.eletkor = 18;
+            /* teglalap Pisti = new teglalap();
+             Pisti.nev = "Nagy Pisti";
+             Pisti.eletkor = 20;
+             Pisti.eletkor++;
+             teglalap eva = new teglalap();
+             eva.nev = "Nagy Éva";
+             eva.eletkor = 18;
+             */
 
+            //  Console.WriteLine(Pisti.bemutatkozas());
+            // Console.WriteLine(eva.bemutatkozas()); 
 
-            Console.WriteLine(Pisti.bemutatkozas());
-            Console.WriteLine(eva.bemutatkozas()); 
+            teglalap t = new teglalap();
+            t.a = int.Parse(Console.ReadLine());
+            
+            t.b = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(t.keruletmetodus());
+            Console.WriteLine(t.teruletmetodus());
 
             Console.ReadKey();
         }
